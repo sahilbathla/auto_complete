@@ -51,6 +51,6 @@ group :development, :test do
   gem 'faker'
   gem 'jquery-ui-rails'
 
-  ruby '2.1.6'
+  ruby '2.1.5'
 end
 
