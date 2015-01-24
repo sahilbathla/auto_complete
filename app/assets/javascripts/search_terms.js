@@ -12,6 +12,7 @@ var AutoSearch = {
     }
   },
 
+  //Function that renders individual item in autosearch
   renderItem: function(ul, item) {
     if (item.industry) {
       var $element = $('<div class="parent">');
@@ -27,6 +28,7 @@ var AutoSearch = {
     return $("<li>").append($element).appendTo(ul);
   },
 
+  //make ajax call to fetch data
   remoteSearch: function(request, response) {
     $.ajax({
       url: "api/v1/search_terms/fetch_data",
@@ -41,6 +43,7 @@ var AutoSearch = {
     });
   },
 
+  //autofill box on focus
   autoFillValue: function(event, ui) {
     event.preventDefault();
     $(this).val(ui.item.name);

@@ -1,4 +1,5 @@
 class Api::V1::SearchTermsController < ApplicationController
+
   def fetch_data
     unless params[:query].squish.empty?
       query = params[:query].squish.humanize
@@ -12,10 +13,12 @@ class Api::V1::SearchTermsController < ApplicationController
   end
 
   private
+    #Fetch Business JSON (User jbuilder or active record serializer for it)
     def business_json
       @businesses.as_json(only: [:name, :id], include: { industry: { only: [:id, :name] }})
     end
 
+    #Fetch Industry JSON
     def industry_json
       @industries.as_json(only: [:name, :id])
     end
