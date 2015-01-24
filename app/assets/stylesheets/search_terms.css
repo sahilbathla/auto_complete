@@ -1,0 +1,45 @@
+body {
+  background-image: url('http://nguistyle.com/wp-content/uploads/2013/07/wood-slat-background.jpg');
+  background-size: 100%;
+}
+
+#search {
+  position: absolute;
+  width: 30%;
+  height: 2%;
+  top:40%;
+  left:35%;
+  border-radius: 5px;
+  padding: 15px;
+  outline: none;
+}
+
+.highlight
+ {
+  font-weight: bold;
+ }
+
+.margin-10 {
+  margin-left: 10px;
+}
+
+.margin-10:hover {
+  margin-left: 9px
+}
+
+.hover {
+  background: #eee !important;
+  border: none !important;
+ }
+
+.parent {
+  margin-left: 6px;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  padding-top: 4px;
+  vertical-align: bottom;
+}
