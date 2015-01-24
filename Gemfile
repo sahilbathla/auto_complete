@@ -32,6 +32,8 @@ gem 'rails-html-sanitizer', '~> 1.0'
 #For Heroku
 gem 'rails_12factor', group: :production
 
+gem 'faker'
+gem 'jquery-ui-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -47,9 +49,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  gem 'faker'
-  gem 'jquery-ui-rails'
 
   ruby '2.1.5'
 end
