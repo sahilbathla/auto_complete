@@ -44,9 +44,9 @@ var AutoSearch = {
   },
 
   //autofill box on focus
-  autoFillValue: function(event, ui) {
+  autoFillValue: function(event, ui, $element) {
     event.preventDefault();
-    $(this).val(ui.item.name);
+    $element.val(ui.item.name);
     $('[data-id]').removeClass('hover');
     $('[data-id="' + ui.item.id + '"').addClass('hover');
   },
@@ -58,7 +58,8 @@ var AutoSearch = {
         _this.remoteSearch(request, response)
       },
       focus: function (event, ui) {
-        _this.autoFillValue(event, ui)
+        var $element = $(this)
+        _this.autoFillValue(event, ui, $element)
       },
     }).data("ui-autocomplete")._renderItem = _this.renderItem;
   }
